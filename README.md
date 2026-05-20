@@ -2,11 +2,11 @@
 
 # 🛍️ Flutter E-Commerce App
 
-**A modern, fully functional e-commerce mobile app built with Flutter — smooth shopping experience on any device.**
+**A modern and visually appealing e-commerce mobile app built with Flutter — seamless shopping experience, fully offline-capable.**
 
 [![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)](https://flutter.dev/)
 [![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)](https://dart.dev/)
-[![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)](https://firebase.google.com/)
+[![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)](https://pub.dev/packages/sqflite)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
 [![Platform](https://img.shields.io/badge/Platform-Android%20%7C%20iOS-green?style=for-the-badge&logo=android)](https://flutter.dev/)
 
@@ -16,19 +16,18 @@
 
 ## 📖 About
 
-A complete e-commerce application that gives users a seamless and enjoyable shopping experience — from browsing products to completing an order. Built with clean architecture and a polished UI/UX in mind.
+A complete e-commerce application that delivers a smooth and enjoyable shopping experience — from browsing products to managing your cart and wishlist. All user data is stored locally on the device using **SQLite**, ensuring the app works reliably even without an internet connection.
 
 ---
 
 ## 🌟 Features
 
-- 🛍️ **Product Catalog** — Browse products organized by category with search support
-- 📄 **Product Details** — Detailed pages with images, price, description, and reviews
-- 🛒 **Shopping Cart** — Add, remove, and update item quantities with ease
-- ❤️ **Wishlist** — Save favorite products to buy later
-- 🔐 **User Authentication** — Secure sign-up, login, and profile management
-- 💳 **Checkout Flow** — Clean and intuitive order and payment simulation screen
-- 📱 **Cross-Platform** — Flawless performance on both Android and iOS
+- 🛍️ **Product Catalog** — Visual display of products organized by category
+- 📄 **Product Details** — Clean product page with images, price, and descriptions
+- 🛒 **Shopping Cart** — Add products, update quantities, and remove items
+- ❤️ **Wishlist** — A dedicated page to save your favorite products
+- 💾 **Offline Support** — Cart and wishlist data persisted locally via SQLite, even after closing the app
+- 📱 **Cross-Platform** — Perfect visual performance and responsiveness on both Android and iOS
 
 ---
 
@@ -36,9 +35,9 @@ A complete e-commerce application that gives users a seamless and enjoyable shop
 
 > _Upload your screenshots to the project and replace the placeholders below_
 
-| Home | Product Detail | Cart | Checkout |
+| Home | Product Detail | Cart | Wishlist |
 |------|---------------|------|----------|
-| ![Home](screenshots/home.png) | ![Detail](screenshots/detail.png) | ![Cart](screenshots/cart.png) | ![Checkout](screenshots/checkout.png) |
+| ![Home](screenshots/home.png) | ![Detail](screenshots/detail.png) | ![Cart](screenshots/cart.png) | ![Wishlist](screenshots/wishlist.png) |
 
 ---
 
@@ -48,10 +47,7 @@ A complete e-commerce application that gives users a seamless and enjoyable shop
 |------------|------|
 | [Flutter](https://flutter.dev/) | Cross-platform UI framework |
 | [Dart](https://dart.dev/) | Programming language |
-| [Provider](https://pub.dev/packages/provider) | State management |
-| [Firebase Auth](https://firebase.google.com/products/auth) | User authentication |
-| [Cloud Firestore](https://firebase.google.com/products/firestore) | Database |
-| [Firebase Storage](https://firebase.google.com/products/storage) | Image storage |
+| [sqflite](https://pub.dev/packages/sqflite) | Local SQLite database for offline storage |
 
 ---
 
@@ -63,8 +59,6 @@ Follow these steps to run the project locally on your machine.
 
 - [Flutter SDK](https://docs.flutter.dev/get-started/install) (latest stable version recommended)
 - An IDE of your choice (VS Code, Android Studio, etc.)
-- A Firebase project with Firestore and Authentication enabled
-- `google-services.json` (Android) and `GoogleService-Info.plist` (iOS) config files
 
 ### Installation
 
@@ -83,20 +77,18 @@ Follow these steps to run the project locally on your machine.
    flutter pub get
    ```
 
-4. **Add your Firebase config files**
-   - Place `google-services.json` in `android/app/`
-   - Place `GoogleService-Info.plist` in `ios/Runner/`
-
-5. **Run the app**
+4. **Run the app**
    ```bash
    flutter run
    ```
+
+> No Firebase or external backend setup required — the app runs fully with local storage out of the box. ✅
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome! Feel free to open an [Issue](https://github.com/flutterist0/ecommerce_app/issues) or submit a [Pull Request](https://github.com/flutterist0/ecommerce_app/pulls).
+Contributions are welcome! Feel free to open an [Issue](https://github.com/flutterist0/ecommerce_app/issues) or submit a [Pull Request](https://github.com/flutterist0/ecommerce_app/pulls). Design suggestions and code improvements are always appreciated!
 
 1. Fork the project
 2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
